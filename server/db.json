@@ -1,0 +1,42 @@
+{
+  "buildings":[
+    {
+      "id": 1,
+      "buildingYear": 2010,
+      "address": {
+        "street": "Musterstraße 1",
+        "zip": "12345",
+        "city": "Stadt"
+      }
+    },
+    {
+      "id": 2,
+      "buildingYear": 1970,
+      "address": {
+        "street": "Hauptstraße 2",
+        "zip": "45983",
+        "city": "Dorf"
+      }
+    }
+  ],
+  "flats":[
+    {
+      "id": 1,
+      "building": 1,
+      "area": 60.0,
+      "location": "EG rechts"
+    },
+    {
+      "id": 2,
+      "building": 1,
+      "area": 48.5,
+      "location": "EG links"
+    },
+    {
+      "id": 3,
+      "building": 2,
+      "area": 120
+    }
+  ]
+  
+}

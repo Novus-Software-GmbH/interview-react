@@ -1,0 +1,54 @@
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100vh;
+}
+
+.logo {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.navLinks li {
+  margin: 10px 0;
+}
+
+.navLinks a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #666;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navLinks a:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.navLinks a.active {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+.navLinks a svg {
+  margin-right: 10px;
+  font-size: 18px;
+} 
