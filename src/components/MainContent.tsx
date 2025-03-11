@@ -11,7 +11,8 @@ const Home = () => {
     const timer = setInterval(() => {
       setCount(count + 1);
     }, 1000);
-  }, []);
+    return () => clearInterval(timer);
+  });
 
   return (  
   <div className={styles.page} style={{ float: 'left', width: '100%' }}>
