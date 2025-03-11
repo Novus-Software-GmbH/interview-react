@@ -1,4 +1,5 @@
-import { useFetchAllBuildings } from '../store/buildings.query';
+import axios from 'axios';
+import { useQuery } from "@tanstack/react-query";
 import { Building } from '../types/types';
 import styles from './MainContent.module.css';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
@@ -6,10 +7,25 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 // ----------------------------------------------------------------------
 
 
+const fetchAllBuildings = async (): Promise<Building[]> => {
+  const response = await axios.create({
+    baseURL: "http://localhost:3000",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).get<Building[]>('buildings');
+return response.data;
+};
+
+const useFetchAllBuildings = () => 
+  useQuery({
+  queryKey: ["query"], 
+  queryFn: fetchAllBuildings
+  });
+
 const Buildings = () => {
 
-  const { data: allBuildingsJson = [], isLoading } = useFetchAllBuildings();
-  const allBuildings = allBuildingsJson.map(bldg => bldg);
+  const { data: allBuildings = [], isLoading } = useFetchAllBuildings();
 
   return (
     <>

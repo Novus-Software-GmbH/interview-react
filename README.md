@@ -1,12 +1,12 @@
 # Sample project for interviews (Angular)
 
-Run on localhost:4300: `pnpm start` 
+Run on localhost:4300: `npm run start` 
 
 # Mock backend
 
 A simple mock server with two endpoints is built in:
 
-Run it using `pnpm mock:server`. 
+Run it using `npm run mock:server`. 
 
 You can now open `http://localhost:3000/buildings` and `http://localhost:3000/flats`
 
