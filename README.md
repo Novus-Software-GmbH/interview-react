@@ -1,4 +1,4 @@
-# Sample project for interviews (Angular)
+# Sample project for interviews (React)
 
 Run on localhost:4300: `npm run start` 
 
